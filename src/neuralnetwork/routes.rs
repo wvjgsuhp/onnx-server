@@ -2,7 +2,7 @@ use crate::neuralnetwork::*;
 use actix_web::{post, web, HttpResponse, Responder};
 use onnxruntime::{ndarray::Array, session::Session, tensor::OrtOwnedTensor};
 use std::sync::{Arc, Mutex};
-use std::time::{Duration, Instant};
+use std::time::{Instant};
 
 #[post("/predict")]
 async fn predict(
